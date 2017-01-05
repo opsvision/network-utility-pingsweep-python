@@ -12,6 +12,8 @@ def writeCSV(dns, ip, maxr, minr, avg):
 	    return
 
 def pingserver(ip):
+	#optional arguements (ip address, #Tries, BufferSize, UDP/TCP)
+	#r=pyping.ping(ip, 5, 15000, udp=True)
 	r=pyping.ping(ip)
 	if r.ret_code==0:
 		ret={}
